@@ -6,6 +6,7 @@
     <title>Chongqing Export Commodities Exhibition</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <script src="main.js" defer></script>
 </head>
 <body>
           <div class="site-wrapper">
@@ -20,7 +21,12 @@
                                                          <a href=""><span><ion-icon name="storefront-outline"></ion-icon></span> Exhibitors</a>
                                                          <a href=""><span><ion-icon name="clipboard-outline"></ion-icon></span> Enroll</a>
                                               </div>
-                                   </header>
+
+                                              <span class="menu-btn"><ion-icon name="grid-outline"></ion-icon></span>
+                                              <div class="mobile-menu">
+                                                         <a href="s"><span><ion-icon name="clipboard-outline"></ion-icon></span>Enroll</a>
+                                              </div>
+                                            </header>
 
                                    <div class="hero-texts">
                                               <h4>Chongqing Trade with the world</h4>
@@ -84,27 +90,134 @@
                                                            <a href="/"><span><ion-icon name="clipboard-outline"></ion-icon></span>Enroll Today</a>
                                                    </div>
                                                    <div class="countdown-timer">
-                                                              <h2>00: 00: 00: 00</h2>
+                                                               <h2 id="count"></h2>
                                                    </div>
                                       </div>
                              </div>
                    </section>
+
+                   <section id="exhibitions">
+                             <div class="inner-row">
+                                        <div class="exhibition-content">
+                                                     <div class="exhibition-column">
+                                                              <div class="exhibition-description">
+                                                                         <h1>Exhibition Showcase</h1>
+                                                                         <p>In this exhibition, companies in the following industries: Automobile and motorcycle parts, agriculture, manufacturing, electronic information, health care, food security, housing and many more will get a chance to displace their products manufactured from Chongqing and Sichuan China. We will also showcase Kenyan local products.</p>
+
+                                                                         <div class="showcase tiny">
+                                                                              <img src="images/dummy2.jpg" alt="">
+                                                                         </div>
+                                                                         <div class="showcase medium">
+                                                                                     <img src="images/dummy1.jpg" alt="">
+                                                                         </div>
+                                                                         <div class="showcase tiny">
+                                                                                <img src="images/exhibitors3.jpg" alt="">
+                                                                       </div>
+                                                              </div>
+                                                     </div>
+                                                     <div class="exhibition-column">
+                                                                <div class="showcase tiny">
+                                                                           <img src="images/dummy3.jpg" alt="">
+                                                                </div>
+                                                                <div class="showcase long">
+                                                                        <img src="images/dummy5.jpg" alt="">
+                                                                </div>
+                                                                <div class="showcase tiny">
+                                                                         <img src="images/dummy8.jpg" alt="">
+                                                                </div>
+                                                     </div>
+                                                     <div class="exhibition-column">
+                                                              <div class="showcase medium">
+                                                                         <img src="images/dummy6.jpg" alt="">
+                                                               </div>
+                                                               <div class="showcase tiny">
+                                                                            <img src="images/dummy7.jpg" alt="">
+                                                               </div>
+                                                               
+                                                               <div class="showcase long">
+                                                                          <img src="images/dummy9.jpg" alt="">
+                                                               </div>
+                                                     </div>
+                                        </div>
+                             </div>
+                   </section>
+
+                   <section id="nudge">
+                               <div class="inner-row">
+                                        <div class="nudge-content">
+                                                     <h1>More Than 1250 Exhibits</h1>
+                                                     <p>Enroll today to connect with other trade leaders in the marketplace, get to share insights about the trade scene in China and East Africa, and most of all, gain trade partners.</p>
+                                                     <a href="/">Enroll</a>
+                                        </div>
+                               </div>
+                   </section>
+
+                   <section id="footer">
+                              <div class="inner-row">
+                                        <div class="footer-logo">
+                                                    <img src="images/logo.png" alt="">
+                                          </div>
+                                          <div class="footer-content">
+                                                      <div class="footer-column">
+                                                                 
+                                                                 <h3>Quick Contacts</h3>
+                                                                 <div class="contact-box">
+                                                                            <h4>Mr. John Jian Xiaobo</h4>
+                                                                            <p><span><ion-icon name="phone-portrait-outline"></ion-icon></span>+254 743 459579, +86 15929441009</p>
+                                                                            <p><span><ion-icon name="mail-open-outline"></ion-icon></span>631935759@qq.com</p>
+                                                                 </div>
+                                                                   <div class="contact-box">
+                                                                            <h4>Mr. Joseph Wanguo</h4>
+                                                                            <p><span><ion-icon name="phone-portrait-outline"></ion-icon></span>+254 701 730233</p>
+                                                                            <p><span><ion-icon name="mail-open-outline"></ion-icon></span>jsphmnr@gmail.com</p>
+                                                                 </div>
+                                                                   <div class="contact-box end">
+                                                                            <h4>Ms. Irene Mwangi</h4>
+                                                                            <p><span><ion-icon name="phone-portrait-outline"></ion-icon></span>+254 704 269421</p>
+                                                                            <p><span><ion-icon name="mail-open-outline"></ion-icon></span>irenewmwangi85@gmail.com</p>
+                                                                 </div>
+                                                                 <div class="footer-social-links">
+                                                                            <ul>
+                                                                                    <li><a href="s"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                                                                    <li><a href="s"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                                                                                    <li><a href="s"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                                                                    <li><a href="s"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                                                                            </ul>
+                                                                 </div>
+                                                      </div>
+                                                      <div class="footer-column">
+                                                                  <div class="event-schedule">
+                                                                            <h3>Exhibition Time</h3>
+                                                                            <p>From Aug 31st to Sep 2nd, 2023</p>
+                                                                            <p>9.00 AM - 17.00 PM Every Day</p>
+                                                                  </div>
+                                                                 <div class="initial-box">
+                                                                           <h3>Sponsored By:</h3>
+                                                                           <p>China Council for the Promotion of International Trade Chongqing Committee</p>
+                                                                           <p>Chongqing Municipal Commission of Commerce</p>
+                                                                           <p>China Council fo the Promotion of International Trade Sichuan Committee</p>
+                                                                 </div>
+                                                                 <div class="initial-box">
+                                                                            <h3>Organized By:</h3>
+                                                                            <p>Chongqing Chinabase Import & Export Co. Ltd (China Center in Kenya)</p>
+                                                                 </div>
+                                                                 <div class="initial-box">
+                                                                           <h3>Supported By:</h3>
+                                                                           <p>Chuanyu Association Kenya</p>
+                                                                           <p>Youye Media</p>
+                                                                 </div>
+                                                      </div>
+                                          </div>
+                              </div>
+                   </section>
+                    <section id="copyright">
+                             <div class="inner-row">
+                                        <div class="copyright-content">
+                                                    <p>Chongqing Export Commodities Exhibition &COPY; <span id="cdate"><script>document.getElementById('cdate').innerText = new Date().getFullYear()</script></span> | All rights Reserved.</p>
+                                        </div>
+                             </div>
+                    </section>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
