@@ -60,12 +60,14 @@ header{
 }
 
 header .logo,
-.footer-logo{
+.footer-logo,
+.heading .logo{
     width: 320px;
     height: 90px;
 }
 header .logo img,
-.footer-logo img{
+.footer-logo img,
+.heading .logo img{
      object-fit: contain;
 }
 .header-btns{
@@ -321,7 +323,6 @@ header .mobile-menu.active{
 
 .countdown-timer h2{
       font-size: 40px;
-      font-weight: 500;
       color: var(--redish);
       text-align: center;
 }
@@ -397,6 +398,11 @@ header .mobile-menu.active{
       align-items: center;
       justify-content: center;
       margin: auto;
+      border-radius: 7px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      -o-border-radius: 7px;
 }
 #footer{
     padding: 80px 0;
@@ -478,6 +484,99 @@ header .mobile-menu.active{
 }
 
 
+/* Enroll Styles */
+.heading{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.heading a{
+      width: 100px;
+      height: 45px;
+      border: 2px solid var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      -o-border-radius: 7px;
+      color: #333;
+}
+
+.enrollment-body{
+     width: 700px;
+     margin: 50px auto 150px auto;
+}
+.enrollment-body h2{
+    font-size: 35px;
+    text-align: center;
+    line-height: 55px;
+}
+.enrollment-body p{
+     width: 80%;
+     margin: 10px auto 30px auto;
+     text-align: center;
+     font-size: 18px;
+    line-height: 32px;
+}
+.form-row{
+    margin-bottom: 30px;
+}
+.form-row label{
+    display: block;
+    margin-bottom: 5px;
+}
+.form-row .form-control{
+    width: 100%;
+    height: 55px;
+    font-family: var(--regular);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border: 1px solid rgba(220, 220, 220, 0.5);
+    padding-left: 15px;
+    font-size: 16px;
+    outline: none;
+}
+.form-row textarea{
+    width: 100%;
+    height: 150px;
+    font-family: var(--regular);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border: 1px solid rgba(220, 220, 220, 0.5);
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}
+.enrollment-body .form-btn{
+    display: flex;
+    justify-content: center;
+}
+.enrollment-body button{
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    font-family: var(--regular);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    background:var(--main-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
 
 
 
@@ -502,6 +601,10 @@ header .mobile-menu.active{
           width: 100%;
           padding-top: 10%;
     }
+
+    #partners{
+         padding-top: 25%;
+    }
      .exhibition-content,
      .countdown-content{
            grid-template-columns: 1fr;
@@ -525,10 +628,79 @@ header .mobile-menu.active{
     header .mobile-menu{
          display: flex;
     }
+    header .logo,
+    .footer-logo,
+    .heading .logo{
+        width: 60%;
+        height: 90px;
+    }
+    #partners{
+        padding-top: 15%;
+   }
+    .hero-texts h4{
+         font-size: 18px;
+    }
+    .hero-texts h1{
+         font-size: 40px;
+    }
+    .hero-texts p.event-desc{
+            margin: 0 auto 20px auto;
+            width: 90%;
+    }
+    .date-and-location{
+         flex-direction: column;
+         gap: 20px;
+         width: max-content;
+         margin: auto;
+    }
+    .countdown-content{
+          padding:40px;
+    }
+    .small-describe h2{
+           text-align: center;
+    }
+    .small-describe a{
+          margin: auto;
+    }
+     .nudge-content h1{
+           font-size: 40px;
+     }
+
+     .nudge-content p{
+          width: 100%;
+          font-size: 18px;
+          line-height: 28px;
+     }
+    .enrollment-body{
+          width: 90%;
+    }
+    .enrollment-body h2{
+          font-size: 30px;
+          line-height: 40px;
+    }
+    .enrollment-body p{
+        width: 100%;
+    }
     .nudge-content p{
            width: 100%;
     }
     .footer-content{
         grid-template-columns: repeat(1,1fr);
  }
+}
+
+@media(max-width: 500px){
+    .exhibition-description h1{
+        font-size: 40px;
+        text-align: center;
+  }
+  .exhibition-description p{
+        text-align: center;
+  }
+    .copyright-content p{
+           text-align: center;
+    }
+    #partners{
+         padding-top: 10%;
+    }
 }
