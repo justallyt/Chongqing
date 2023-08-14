@@ -498,7 +498,10 @@ header .mobile-menu.active{
 
 .copyright-content{
     text-align: center;
-    position: relative;
+    position: relative;;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .copyright-content::before{
       content: '';
@@ -512,7 +515,9 @@ header .mobile-menu.active{
 .copyright-content p{
     font-size: 13px;
 }
-
+.copyright-content p a{
+    color: rgb(0, 182, 189);
+}
 
 /* Enroll Styles */
 .heading{
@@ -639,6 +644,9 @@ header .mobile-menu.active{
      .countdown-content{
            grid-template-columns: 1fr;
      }
+     .countdown-timer{
+           justify-content: center;
+     }
       .showcase.tiny,
       .showcase.medium{
              height: auto;
@@ -730,6 +738,11 @@ header .mobile-menu.active{
     .footer-content{
         grid-template-columns: repeat(1,1fr);
  }
+ .copyright-content{
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+ }
 }
 
 @media(max-width: 500px){
@@ -744,6 +757,7 @@ header .mobile-menu.active{
         font-size: 30px;
         line-height: 45px;
   }
+
     .copyright-content p{
            text-align: center;
     }
