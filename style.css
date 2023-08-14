@@ -252,6 +252,20 @@ header .mobile-menu.active{
     -o-transform: translateX(30px);
 }
 
+.partnership{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.partnership h3{
+    font-size: 25px;
+    font-weight: 500;
+}
+.partnership p{
+     color: gray;
+}
 .partners-content{
        margin: 40px auto 0px auto;
        text-align: center;
@@ -368,8 +382,20 @@ header .mobile-menu.active{
 .showcase.medium{
       height: 350px;
 }
-
-
+#about-ccpit{
+    padding-bottom: 80px;
+}
+.about-ccpit-content h1{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.about-ccpit-content p{
+    width: 80%;
+    margin: auto;
+    line-height: 32px;
+    font-size: 18px;
+}
 #nudge{
       background: rgb(4, 8, 19);
       padding: 150px 0;
@@ -619,6 +645,9 @@ header .mobile-menu.active{
       }
       .exhibition-column:nth-child(2){
           padding-top: 0;
+      }
+      .about-ccpit-content p{
+           width: 100%;
       }
 }
 
