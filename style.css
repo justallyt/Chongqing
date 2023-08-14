@@ -62,8 +62,9 @@ header{
 header .logo,
 .footer-logo,
 .heading .logo{
-    width: 320px;
+    width: 280px;
     height: 90px;
+    display: flex;
 }
 header .logo img,
 .footer-logo img,
@@ -75,7 +76,7 @@ header .logo img,
     gap: 20px;
 }
 .header-btns a{
-     width: 150px;
+     width: 200px;
      border: 1px solid;
      height: 50px;
      display: flex;
@@ -114,7 +115,7 @@ header .mobile-menu{
        border-radius: 7px;
        border: 1px solid rgba(220, 220, 220, 0.453);
        display: none;
-       width: 150px;
+       width: 200px;
        padding: 15px;
        position: absolute;
        right: 0;
@@ -181,7 +182,7 @@ header .mobile-menu.active{
      font-size: 20px;
      width: 80%;
      line-height: 35px;
-     margin-bottom: 40px;
+     margin-bottom: 50px;
      text-align: center;
      margin: 0 auto 40px auto;
 }
@@ -214,14 +215,14 @@ header .mobile-menu.active{
 
 /* Partners Section */
 #partners{
-      padding: 300px 0 100px;
+      padding: 400px 0 100px;
       position: relative;
 }
 .hero-images-container{
     width: 100%;
     overflow: hidden;
     position: absolute;
-    top: -120px;;
+    top: -50px;;
 }
 .hero-images{
       display: grid;
@@ -298,7 +299,7 @@ header .mobile-menu.active{
       margin-bottom: 20px;
 }
 .small-describe a{
-     width: 180px;
+     width: 220px;
      height: 50px;
      background: var(--secondary-color);
      color: white;
@@ -390,7 +391,7 @@ header .mobile-menu.active{
     line-height: 36px;
 }
 .nudge-content a{
-      width: 150px;
+      width: 200px;
       height: 50px;
       background: var(--secondary-color);
       color: white;
@@ -403,6 +404,9 @@ header .mobile-menu.active{
       -moz-border-radius: 7px;
       -ms-border-radius: 7px;
       -o-border-radius: 7px;
+}
+.nudge-content a span{
+    display: flex;
 }
 #footer{
     padding: 80px 0;
