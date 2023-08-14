@@ -624,7 +624,7 @@ header .mobile-menu.active{
 @media(max-width: 1000px){
     #landing{
            height: auto;
-           padding-bottom: 200px;
+           padding-bottom: 100px;
     }
   
     .hero-texts {
@@ -633,7 +633,7 @@ header .mobile-menu.active{
     }
 
     #partners{
-         padding-top: 25%;
+         padding-top: 30%;
     }
      .exhibition-content,
      .countdown-content{
@@ -664,11 +664,15 @@ header .mobile-menu.active{
     header .logo,
     .footer-logo,
     .heading .logo{
-        width: 60%;
+        width: 50%;
         height: 90px;
     }
+    header .logo{
+        width: 30%;
+        height: 70px;
+    }
     #partners{
-        padding-top: 15%;
+        padding-top: 30%;
    }
     .hero-texts h4{
          font-size: 18px;
@@ -685,6 +689,12 @@ header .mobile-menu.active{
          gap: 20px;
          width: max-content;
          margin: auto;
+    }
+    .partnership {
+           flex-direction: column;
+    }
+    .partnership p, .partnership h3{
+          text-align: center;
     }
     .countdown-content{
           padding:40px;
@@ -729,6 +739,10 @@ header .mobile-menu.active{
   }
   .exhibition-description p{
         text-align: center;
+  }
+  .small-describe h2{
+        font-size: 30px;
+        line-height: 45px;
   }
     .copyright-content p{
            text-align: center;
