@@ -296,7 +296,7 @@ header .mobile-menu.active{
 .countdown-content{
       background: var(--main-color);
       color: white;
-      padding: 40px 60px;
+      padding: 60px;
       border-radius: 20px;
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
