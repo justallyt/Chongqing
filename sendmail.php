@@ -9,6 +9,11 @@
     $phone = trim($_POST['client_phone']);
     $company = trim($_POST['company']);
     $message = trim($_POST['message']);
+    $token = $_POST['captcha'];
+    
+    $secret = "6LeSCqwnAAAAAD-Qv1Mv4oeLxBvguKs4EEVhbN11";
+    
+    $json = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=". $secret . "&response=" . $token), true);
    
     $header = "Email: ".$email;
    
@@ -18,16 +23,21 @@
              $company. "\n\n".
              $message;
     
-    $emailSend = mail($emailTo, $subject, $body, $header);
+    if($json['success']){
+        $emailSend = mail($emailTo, $subject, $body, $header);
+        
+        if($emailSend){
+            echo "Your details have been registered for the CCPIT Expo. Thanks";
+        }
+        else{
+            echo "Error sending message";
+            error_reporting(-1);
+        }
+    }else{
+        echo "Sorry. Invalid token";
+    }
     
-    
-   if($emailSend){
-       echo "Message Sent Successfully";
-   }
-   else{
-       echo "Error sending message";
-       error_reporting(-1);
-   }
+
 
  }
 ?>

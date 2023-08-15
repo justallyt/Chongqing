@@ -608,10 +608,12 @@ header .mobile-menu.active{
 }
 .enrollment-body .form-btn{
     display: flex;
+    align-items: center;
+    gap: 20px;
     justify-content: center;
 }
 .enrollment-body button{
-    width: 150px;
+    width: 200px;
     height: 50px;
     font-size: 16px;
     font-family: var(--regular);
@@ -625,9 +627,26 @@ header .mobile-menu.active{
     color: white;
     cursor: pointer;
 }
+#result{
+    text-align: center;
+    color: rgba(10, 181, 96);
+    margin-top: 10px;
+}
 
+.spinner {
+   display: none;
+   width: 4.8px;
+   height: 4.8px;
+   animation: spinner-z355kx 1s infinite linear;
+   border-radius: 4.8px;
+   box-shadow: 12px 0px 0 0 #0f2d7f, 7.4px 9.4px 0 0 #0f2d7f, -2.6px 11.6px 0 0 #0f2d7f, -10.8px 5.2px 0 0 #0f2d7f, -10.8px -5.2px 0 0 #0f2d7f, -2.6px -11.6px 0 0 #0f2d7f, 7.4px -9.4px 0 0 #0f2d7f;
+}
 
-
+@keyframes spinner-z355kx {
+   to {
+      transform: rotate(360deg);
+   }
+}
 
 
 

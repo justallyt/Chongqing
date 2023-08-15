@@ -99,51 +99,74 @@ const form = document.querySelector('#enroll-form')
 
 
 form.addEventListener('input', (e) => {
-        switch(e.target.id){
-              case 'name' :
-                    checkName();
-                    break;
-              case 'email': 
-                      checkEmail();
-                      break;
-               case 'company':
-                      checkCompany();
-                      break;
-                case 'phone':
-                    checkPhoneNumber();
-                    break;
-        }
+    switch(e.target.id){
+      case 'name' :
+         checkName();
+         break;
+      case 'email': 
+         checkEmail();
+         break;
+      case 'company':
+         checkCompany();
+         break;
+      case 'phone':
+         checkPhoneNumber();
+         break;
+    }
 })
-
 
 //Submit Form
+
 $(document).ready(() => {
-    $('#enroll-form').submit(function(e){
-        e.preventDefault();
+     $('#enroll-form').submit(function(e){
+         e.preventDefault();
+         $(".spinner").show();
+        //validate forms
+        let isNameOkay = checkName(),
+               isEmailOkay = checkEmail(),
+               isCompanyOkay = checkCompany(),
+               isPhoneOkay = checkPhoneNumber();
+
+        let isEverythingOkay = isNameOkay && isEmailOkay && isCompanyOkay && isPhoneOkay;
         
-       //validate forms
-       let isNameOkay = checkName(),
-              isEmailOkay = checkEmail(),
-              isCompanyOkay = checkCompany(),
-              isPhoneOkay = checkPhoneNumber();
-
-       let isEverythingOkay = isNameOkay && isEmailOkay && isCompanyOkay && isPhoneOkay;
-       
-       if(isEverythingOkay){
-           $.ajax({
-               type: "POST",
-               url: 'sendmail.php',
-               data: $(this).serialize(),
-               success: data => $('#result').html(data).fadeIn()
-           }).done(function(){
-               $(this).find("input").val("");
-               $("#enroll-form").trigger('reset');
-               setTimeout(()=> {
-                   $('#result').fadeOut();
-               }, 3000)
-           })
-       }
-    })
+        if(isEverythingOkay){
+            let name = $("#name").val();
+            let email = $("#email").val();
+            let company = $('#company').val();
+            let phone = $("#phone").val();
+            let message = $("#message").val();
+            grecaptcha.ready(function(){
+                grecaptcha.execute('6LeSCqwnAAAAADdunzZIaCdT3Po_5zjzRJEdif93', {action: 'submit'}).then(function(token){
+                    $.ajax({
+                       type: "POST",
+                       url: 'sendmail.php',
+                       data:{
+                          fullname: name,
+                                 client_email: email,
+                          client_phone: phone,
+                          company: company,
+                          message: message,
+                          captcha: token
+                       },
+                       
+                       success: data => {
+                           $("#register").html("Registered")
+                           $('#result').html(data).fadeIn()
+                           $(".spinner").hide();
+                       }
+                       }).done(function(){
+                            $(this).find("input").val("");
+                            
+                            $("#enroll-form").trigger('reset');
+                            setTimeout(()=> {
+                               $('#result').fadeOut();
+                               $("#register").html("Register Another");
+                            }, 3000)
+                       })
+                })
+            })
+            
+        }
+     })
 })
-
 
