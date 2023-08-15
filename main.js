@@ -35,4 +35,3 @@ let interval = setInterval(() => {
       }
 })
 
-
