@@ -6,7 +6,6 @@
     <title>Chongqing Export Commodities Exhibition</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <script src="formHandling.js" defer></script>
 </head>
 <body>
            <div class="site-wrapper">
@@ -24,27 +23,27 @@
                                         <form action="" method="post" id="enroll-form">
                                                     <div class="form-row">
                                                                <label for="Full name">Full Name <span>*</span> </label>
-                                                               <input type="text" class="form-control" id="name" placeholder="John Doe">
+                                                               <input type="text" name="name" class="form-control" id="name" placeholder="John Doe">
                                                                <small></small>
                                                     </div>
                                                     <div class="form-row">
                                                                <label for="Email">Email Address <span>*</span></label>
-                                                               <input type="email" class="form-control" id="email" placeholder="xyz@domain.com">
+                                                               <input type="email" name="email" class="form-control" id="email" placeholder="xyz@domain.com">
                                                                <small></small>
                                                     </div>
                                                     <div class="form-row">
                                                                <label for="Company">Company <span>*</span></label>
-                                                               <input type="text" class="form-control" id="company" placeholder="Z Company">
+                                                               <input type="text" name="company" class="form-control" id="company" placeholder="Z Company">
                                                                <small></small>
                                                     </div>
                                                     <div class="form-row">
                                                                <label for="Phone">Phone Number <span>*</span></label>
-                                                               <input type="tel" class="form-control" id="phone" placeholder="0712345678">
+                                                               <input type="tel" name="phone" class="form-control" id="phone" placeholder="0712345678">
                                                                <small></small>
                                                     </div>
                                                     <div class="form-row">
                                                                <label for="Message">Interested In speaking with any of our Exhibitors?</label>
-                                                               <textarea name="" id="message" placeholder="Write your message" cols="30" rows="10"></textarea>
+                                                               <textarea name="message" id="message" placeholder="Write your message" cols="30" rows="10"></textarea>
                                                     </div>
 
                                                     <div class="form-btn">
@@ -62,5 +61,8 @@
                        </div>
             </div>
    </section>
+
+           <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+           <script src="formHandling.js"></script>
 </body>
 </html>

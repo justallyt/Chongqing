@@ -114,17 +114,36 @@ form.addEventListener('input', (e) => {
                     break;
         }
 })
-form.addEventListener('submit', (e) => {
+
+
+//Submit Form
+$(document).ready(() => {
+    $('#enroll-form').submit(function(e){
         e.preventDefault();
-
-        //validate forms
-
-        let isNameOkay = checkName(),
-               isEmailOkay = checkEmail(),
-               isCompanyOkay = checkCompany(),
-               isPhoneOkay = checkPhoneNumber();
+        
+       //validate forms
+       let isNameOkay = checkName(),
+              isEmailOkay = checkEmail(),
+              isCompanyOkay = checkCompany(),
+              isPhoneOkay = checkPhoneNumber();
 
        let isEverythingOkay = isNameOkay && isEmailOkay && isCompanyOkay && isPhoneOkay;
-
-       console.log(isEverythingOkay);
+       
+       if(isEverythingOkay){
+           $.ajax({
+               type: "POST",
+               url: 'sendmail.php',
+               data: $(this).serialize(),
+               success: data => $('#result').html(data).fadeIn()
+           }).done(function(){
+               $(this).find("input").val("");
+               $("#enroll-form").trigger('reset');
+               setTimeout(()=> {
+                   $('#result').fadeOut();
+               }, 3000)
+           })
+       }
+    })
 })
+
+

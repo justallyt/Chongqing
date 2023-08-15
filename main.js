@@ -35,3 +35,10 @@ let interval = setInterval(() => {
       }
 })
 
+const someData = [
+      {name:"cool proj", url:"www.blabla", imgUrl:'img', tag:"UI/UX"},
+      {name: "proj 2",url:"www.blabla", imgUrl:'', tag:"MERN"},
+      {name: "proj3",url:"www.blabla", imgUrl:'', tag:"UI/UX"},
+      ]
+const filter = [...new Set(someData.map(item => item.tag))]
+console.log(filter)
