@@ -11,7 +11,7 @@
     $message = trim($_POST['message']);
     $token = $_POST['captcha'];
     
-    $secret = "6LeSCqwnAAAAAD-Qv1Mv4oeLxBvguKs4EEVhbN11";
+    $secret = "google secret key here";
     
     $json = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=". $secret . "&response=" . $token), true);
    
